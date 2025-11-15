@@ -1,28 +1,32 @@
-# Taller 03 – Sincronización POSIX (Semáforos y Pthreads)
 
-Este repositorio contiene la implementación del Taller 03 de Sistemas Operativos, enfocado en poner en práctica mecanismos de **concurrencia** y **sincronización** usando la interfaz **POSIX**.
+Taller – Evaluación de Rendimiento (Paralelismo con Fork, POSIX Threads y OpenMP)
 
-El proyecto se divide en **dos actividades independientes**:
+Este repositorio contiene el desarrollo del taller de evaluación de rendimiento, donde se trabajó el algoritmo clásico de multiplicación de matrices para comparar varias formas de paralelismo. Las implementaciones se realizaron usando procesos con fork(), hilos POSIX (pthread) y dos variantes con OpenMP, con el fin de observar cómo cambia el tiempo de ejecución según el tipo de paralelización y el tamaño de las matrices.
 
-- **Actividad 1:** sincronización entre procesos usando **memoria compartida POSIX** y **semáforos con nombre**.  
-- **Actividad 2:** sincronización entre hilos usando **pthreads**, **mutex** y **variables de condición**.
 
----
-
-## 1. Estructura del repositorio
+1. Estructura del repositorio
 
 ```text
-.
-├── Actividad_1/
-│   ├── header.h
-│   ├── productor.c
-│   ├── consumidor.c
-│   └── Makefile
-└── Actividad_2/
-    ├── concurrenciaPosix.c
-    ├── concurrenciaPosix.h
-    ├── posixSincro.c
-    ├── posixSincro.h
-    ├── prueba.txt
-    └── Makefile
+Fork/
+    main.c
+    funciones.c
+    funciones.h
+    Makefile
 
+Pthreads/
+    main.c
+    funciones.c
+    funciones.h
+    Makefile
+
+OMP_Simple/
+    main.c
+    funciones.c
+    funciones.h
+    Makefile
+
+OMP_Filas/
+    main.c
+    funciones.c
+    funciones.h
+    Makefile
